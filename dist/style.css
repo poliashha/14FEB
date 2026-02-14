@@ -1,5 +1,30 @@
 body {
-  margin: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.button {
+  display: flex;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeef6;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #ffd7ee;
+}
+
+.input-cat {
+  width: 30px;
+  height: 30px;
 }
 
 .button.noshow {
@@ -8,8 +33,60 @@ body {
 
 .foto-cat {
   display: none;
+  max-width: 700px;
+  width: 100%;
 }
 
 .foto-cat.show {
   display: block;
+  animation: rotateAndScale 2s forwards linear;
+}
+
+.after-animation {
+  width: 300px;
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 0.5s;
+}
+
+.after-animation.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateAndScale {
+  0% {
+    transform: scale(0.1) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(0.3) rotate(-10deg);
+    /* увеличили и повернули влево */
+  }
+
+  50% {
+    transform: scale(0.5) rotate(0deg);
+    /* максимальное увеличение */
+  }
+
+  75% {
+    transform: scale(0.7) rotate(10deg);
+    /* увеличили и повернули вправо */
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    /* вернулись в исходное */
+  }
 }
