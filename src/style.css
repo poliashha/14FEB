@@ -16,6 +16,7 @@ body {
   align-items: center;
   background-color: #ffeef6;
   transition: 0.2s;
+  color: #000;
 }
 
 .button:hover {
