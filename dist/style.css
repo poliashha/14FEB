@@ -1,0 +1,15 @@
+body {
+  margin: auto;
+}
+
+.button.noshow {
+  display: none;
+}
+
+.foto-cat {
+  display: none;
+}
+
+.foto-cat.show {
+  display: block;
+}

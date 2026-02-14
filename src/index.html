@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14 feb</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button class="button">
+      Нажми
+      <img src="./images/kot.svg" alt="" class="input-cat" />
+    </button>
+
+    <img class="foto-cat" src="./images/cat.svg" alt="" />
+    <img src="./images/Frame 3.png" alt="" class="after-animation" />
+    <script>
+      const button = document.querySelector(".button");
+      const image = document.querySelector(".foto-cat");
+      const afterAnimation = document.querySelector(".after-animation");
+      button.addEventListener("click", function () {
+        image.classList.add("show");
+        button.classList.add("noshow");
+      });
+
+      button.addEventListener("click", function () {
+        
+        image.classList.add("show");
+        button.classList.add("noshow");
+
+      
+        image.addEventListener(
+          "animationend",
+          function () {
+           
+            afterAnimation.classList.add("show");
+            image.style.display = "none";
+          },
+        ); 
+      });
+    </script>
+  </body>
+</html>
