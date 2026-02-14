@@ -4,6 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 .button {
@@ -19,6 +20,10 @@ body {
   color: #000;
   font-size: 20px;
   font-weight: 700
+}
+
+.noshow{
+  display: none;
 }
 
 .button:hover {
@@ -42,7 +47,7 @@ body {
 
 .foto-cat.show {
   display: block;
-  animation: rotateAndScale 2s forwards linear;
+  animation: rotateAndScale 1.5s forwards linear;
 }
 
 .after-animation {
