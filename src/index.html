@@ -7,42 +7,36 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1 class="title">
-      Для Вас валентинка 
-    </h1>
-    <button class="button">
-      Нажми
-      <img src="./images/kot.svg" alt="" class="input-cat" />
-    </button>
-
-    <img class="foto-cat" src="./images/cat.svg" alt="" />
+    <main class="content">
+      <h1 class="title">Для Вас валентинка</h1>
+      <button class="button">
+        Нажми
+        <img src="./images/kot.svg" alt="" class="input-cat" />
+      </button>
+    </main>
+    <img class="foto-cat" src="./images/Frame 6.svg" alt="" />
     <img src="./images/Frame 3.svg" alt="" class="after-animation" />
     <script>
       const button = document.querySelector(".button");
       const image = document.querySelector(".foto-cat");
       const afterAnimation = document.querySelector(".after-animation");
       const title = document.querySelector(".title");
+      const content = document.querySelector(".content");
       button.addEventListener("click", function () {
         image.classList.add("show");
         button.classList.add("noshow");
         title.classList.add("noshow");
-
+        content.classList.add("noshow");
       });
 
       button.addEventListener("click", function () {
-        
         image.classList.add("show");
         button.classList.add("noshow");
 
-      
-        image.addEventListener(
-          "animationend",
-          function () {
-           
-            afterAnimation.classList.add("show");
-            image.style.display = "none";
-          },
-        ); 
+        image.addEventListener("animationend", function () {
+          afterAnimation.classList.add("show");
+          image.style.display = "none";
+        });
       });
     </script>
   </body>
